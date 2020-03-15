@@ -1,0 +1,26 @@
+plugins {
+    id 'scala'
+}
+
+group 'com.kos.kit'
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    scalapbVersion = '0.10.0-M4'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "com.squareup.okhttp3:okhttp:4.4.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.4.0"
+    implementation "org.scala-lang:scala-library:2.11.12"
+    implementation "com.thesamet.scalapb:scalapb-runtime_2.11:${scalapbVersion}"
+    implementation "com.thesamet.scalapb:scalapb-runtime-grpc_2.11:${scalapbVersion}"
+}
